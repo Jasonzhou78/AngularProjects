@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## ReadMe
+
+*April 29*
+
+3:55pm set up the angular development environment by using brew package manager
+
+(1) start GitHub desktop, create a repository on local machine and publish to GitHub.com
+(2) open the folder using VS code
+(3) create angular cli using `npm install -g @angular/cli`
+(4) create an angular project `myfavoritecar`
+(5) test if the app is up using `npm start`, check the localhost: 4200 port
+
+17:55 when I was trying to modify my app version, there is an error saying "staging error" in github desktop thus can not commit the change. Use the command `git commit -am 'update the app version'` to successfully solved this problem.
