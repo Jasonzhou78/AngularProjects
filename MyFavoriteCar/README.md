@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## ReadMe
 
-*April 29*
+#April 29
 
 3:55pm set up the angular development environment by using brew package manager
 
