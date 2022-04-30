@@ -1,10 +1,12 @@
 import { Content } from "../helper-files/content-interface";
 
 export class ContentList {
-private Content?: [];
+private _cars?: Content[];
 public constructor() {
-  this.Content = [];
+  //initialize the _cars
+  this._cars = [];
 }
-
-
+// define the getter
+get cars(): Content[] {
+  return this._cars = [];
 }
