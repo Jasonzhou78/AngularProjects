@@ -44,5 +44,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #Arpil 30
 
-1754 
+1754 add two functions addCars() and nubmerOfCars() and they works
+2227 continue working on the function output the html format
+
 

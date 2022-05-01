@@ -11,7 +11,7 @@ constructor() {
 
 // define the getter
 get items(): Content[] {
-  return this._cars?;
+  return this._cars?
 }
 
   // add new car to car list
