@@ -41,3 +41,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 17:55 when I was trying to modify my app version, there is an error saying "staging error" in github desktop thus can not commit the change. Use the command `git commit -am 'update the app version'` to successfully solved this problem.
 2330 deleted the project and recreated it. Now the Github desktop works normally
+
+#Arpil 30
+
+1754 
+
