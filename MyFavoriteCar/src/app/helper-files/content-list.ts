@@ -10,8 +10,8 @@ constructor() {
 }
 
 // define the getter
-get items(): Content[] {
-  return this._cars?;
+get cars() {
+  return this._cars;
 }
 
   // add new car to car list
@@ -26,8 +26,7 @@ get items(): Content[] {
 
   public showSingleCar(index: number): string {
     if(index >= 0 && index <= this.numberOfCars.length){
-    let carItem = this._cars?[index];
-    return `'<h1>Title:' + carItem.title +'<br></h1>'+'<h1>Description:'+ carItem.description + '</h1><br>'+'<h1>Creator:' + carItem.creator + '</h1><br>' + '<h1>ImgURL:'+ '</h1>' + '<img src = carItem.imgURL>' + '<br><h1>Type:'+ carItem.type+'</h1>'`;
+    return `'<h1>Title:' + this._cars?[index].title +'<br></h1>'+'<h1>Description:'+ this._cars?[index].description + '</h1><br>'+'<h1>Creator:' + this._cars?[index].creator + '</h1><br>' + '<h1>ImgURL:'+ '</h1>' + '<img src = carItem.imgURL>' + '<br><h1>Type:'+ this._cars?[index].type+'</h1>'`;
   }
     else {
       return "Your index is not effective!";
