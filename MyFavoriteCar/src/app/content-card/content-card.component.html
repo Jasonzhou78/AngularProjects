@@ -1,5 +1,19 @@
 
-
+<!-- AS1 code
 <span [innerHTML] = 'carList?.getHtml(0)'></span>
 <span [innerHTML] = 'carList?.getHtml(1)'></span>
-<span [innerHTML] = 'carList?.getHtml(2)'></span>
+<span [innerHTML] = 'carList?.getHtml(2)'></span> -->
+
+
+<!----AS2 code start from here-->
+<div class="car">
+  <ul>
+    <li *ngFor = "let car of carList; index as i">
+      <div>Description: {{ car.description }}</div>
+      <div>Title: {{ car.title }}</div>
+      <div>Creator: {{car.creator}} </div>
+      <div>Tag: {{ car.type }}</div>
+      <div><img src="{{car.imgURL}}" width="200"></div>
+    </li>
+  </ul>
+</div>
