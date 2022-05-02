@@ -1,8 +1,7 @@
 import { Content } from '../helper-files/content-interface';
 
 export class ContentList {
-private _cars?: Content[];
-indexOfCars?: Content;
+private _cars: Content[];
 
 //initialize the _cars
 constructor() {
@@ -11,26 +10,30 @@ constructor() {
 
 // define the getter
 get cars() {
-  return this._cars;
+  return this._cars = [];
 }
 
   // add new car to car list
-  public addCar(car: Content) {
-    this._cars?.push(car);
+  addCar(car: Content) : void{
+    this._cars.push(car);
   }
 
   //return the number of list of cars
-  public numberOfCars(listOfCars:Content[]): number{
-    return listOfCars.length;
+  numberOfCars(listOfCars:Content[]): number{
+    return this._cars.length;
   }
 
-  public showSingleCar(index: number): string {
-    if(index >= 0 && index <= this.numberOfCars.length){
-    return `'<h1>Title:' + this._cars?[index].title +'<br></h1>'+'<h1>Description:'+ this._cars?[index].description + '</h1><br>'+'<h1>Creator:' + this._cars?[index].creator + '</h1><br>' + '<h1>ImgURL:'+ '</h1>' + '<img src = carItem.imgURL>' + '<br><h1>Type:'+ this._cars?[index].type+'</h1>'`;
-  }
-    else {
-      return "Your index is not effective!";
+  getHtml(index: number): string{
+    if (index >= this._cars.length || index < 0)
+    {
+      return "<div>Something went terribly wrong</div>"
     }
+      let carAtIndex = this._cars[index];
+      return `<div class="title">${carAtIndex.title}</div>
+      <div class="description">${carAtIndex.description}</div>
+      <div class="creator">${carAtIndex.creator}</div>
+      <div class="type">${carAtIndex.type}</div>
+      <div class="image"><img src="${carAtIndex.imgURL}" width="200"></div>`;
 
   }
 
