@@ -6,14 +6,10 @@
 
 
 <!----AS2 code start from here-->
-<div class="car">
-  <ul>
-    <li *ngFor = "let car of carList; index as i">
-      <div>Description: {{ car.description }}</div>
-      <div>Title: {{ car.title }}</div>
-      <div>Creator: {{car.creator}} </div>
-      <div>Tag: {{ car.type }}</div>
-      <div><img src="{{car.imgURL}}" width="200"></div>
-    </li>
-  </ul>
-</div>
+    <div class="car" *ngFor = "let car of carList; index as i">
+      <div class="description">Description: {{ car.description }}</div>
+      <div class="title">Title: {{ car.title }}</div>
+      <div class="creator">Creator: {{car.creator}} </div>
+      <div class="tags">Tag: {{ car.type }}</div>
+      <div class="image"><img src="{{car.imgURL}}" width="200"></div>
+    </div>
