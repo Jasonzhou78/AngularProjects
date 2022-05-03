@@ -1,23 +1,23 @@
-.title {
-  color: red;
-}
+
 
 .car {
   border-style: solid;
   margin: auto;
   border: 1px solid green;
-  width: 40%;
+  width: 30%;
   padding: 10px;
 }
 
-.image {
-  margin: auto;
-  width: 40%;
-  padding: 10px;
+.tag {
+  border-style: solid;
+  border: 1px solid red;
 }
 
-.tags {
-  margin: auto;
-  width: 40%;
-  padding: 10px;
+.tag:hover {
+  background-color: yellow;
+  font-weight: 700;
+}
+
+:host.first-car{
+  border: 2px solid #000;
 }

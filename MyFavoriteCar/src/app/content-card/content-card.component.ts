@@ -8,9 +8,12 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit {
 
-  @Input() carList?: Content[];
+  @Input() singleCar?: Content;
   constructor() {}
-
+  showId() : void{
+    console.log("ID:"+this.singleCar?.id);
+    console.log("Title:"+this.singleCar?.title)
+  }
   ngOnInit(): void {
   }
 

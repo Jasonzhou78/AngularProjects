@@ -55,7 +55,7 @@ getHtml(index: number): string{
       creator: 'Honda',
       imgURL: 'https://media.ed.edmunds-media.com/honda/accord-hybrid/2021/oem/2021_honda_accord-hybrid_sedan_touring_fq_oem_1_1600.jpg',
       type: 'passenger',
-      tags:['blue', '5 seats']
+      /* tags:['blue', '5 seats'] */
     });
     this.addCar({
       id:2,
