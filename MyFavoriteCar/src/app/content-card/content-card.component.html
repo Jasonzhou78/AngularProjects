@@ -6,7 +6,9 @@
 
 
 <!----AS2 code start from here-->
-<div>
+
+<div class="car">
+  <button type="button" [attr.aria-label]="3+2+'xyz'">{{3+2+'xyz'}} with Aria</button>
   <h3 class="title" *ngIf = "singleCar?.title">Title: {{ singleCar?.title }}</h3>
   <div class="description" *ngIf = "singleCar?.description">Description: {{ singleCar?.description }}</div>
   <div class="creator" *ngIf = "singleCar?.creator">Creator: {{singleCar?.creator}} </div>

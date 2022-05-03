@@ -1,11 +1,11 @@
 
-
 .car {
   border-style: solid;
   margin: auto;
   border: 1px solid green;
   width: 30%;
   padding: 10px;
+  text-align: center;
 }
 
 .tag {
@@ -19,5 +19,5 @@
 }
 
 :host.first-car{
-  border: 2px solid #000;
+  background-color: red;
 }
