@@ -7,6 +7,9 @@
 
 <!----AS2 code start from here-->
 <div>
+  <div *ngIf = "singleCar?.title == ''">
+    <img src="https://cdn.vox-cdn.com/thumbor/KdPbtQwqyQoXu8fN3-GnYYabL8w=/0x170:2040x1190/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19580683/mercedes_vision_avtr_0478.jpg" alt="">
+  </div>
   <h3 class="title" *ngIf = "singleCar?.title">Title: {{ singleCar?.title }}</h3>
   <div class="description" *ngIf = "singleCar?.description">Description: {{ singleCar?.description }}</div>
   <div class="creator" *ngIf = "singleCar?.creator">Creator: {{singleCar?.creator}} </div>
