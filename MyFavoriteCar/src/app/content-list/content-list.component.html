@@ -3,10 +3,11 @@
   <input type="text" #checkTitle>
   <button (click)="clickForCheckTitle(checkTitle.value)">Click to Check</button>
   <p *ngIf = 'searchMessage' class = "success">Title Found!</p>
-<p *ngIf = '!searchMessage'class = "fail">Title Not Found!</p>
+<div *ngIf = '!searchMessage'class = "fail">Title Not Found!
+  <div><img src="https://cdn.vox-cdn.com/thumbor/KdPbtQwqyQoXu8fN3-GnYYabL8w=/0x170:2040x1190/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19580683/mercedes_vision_avtr_0478.jpg" width = "200px" alt=""></div>
 </div>
 
-
+</div>
 <app-content-card *ngFor = "let car of (_cars | getType: '') first as isFirst" [singleCar] = "car" class = "notype" [class.found] = "car.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>
 <app-content-card *ngFor = "let car of (_cars | getType: 'SUV') first as isFirst" [singleCar] = "car" class = "suv"  [class.found] = "car.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>
 <app-content-card *ngFor = "let car of (_cars | getType: 'Truck') first as isFirst" [singleCar] = "car" class = "truck"  [class.found] = "car.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>

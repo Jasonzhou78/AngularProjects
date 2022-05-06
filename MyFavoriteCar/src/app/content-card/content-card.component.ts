@@ -9,6 +9,7 @@ import { Content } from '../helper-files/content-interface';
 export class ContentCardComponent implements OnInit {
 
   @Input() singleCar?: Content;
+  @Input() searchString?: string;
   constructor() {}
   showId() : void{
     console.log("ID:"+this.singleCar?.id);
