@@ -10,19 +10,21 @@ export class HighlightDirective {
 
   @HostListener('mouseover')
   onMouseOver() {
-  let tag = this.el.nativeElement.tagName;
+/*   let tag = this.el.nativeElement.tagName;
   if (tag.toLowerCase() == 'div')
   this.el.nativeElement.style.textDecoration = "underline";
   else if(tag.toLowerCase() == "span")
   this.el.nativeElement.style.fontWeight = "bold"
+ */
+  this.el.nativeElement.style.textDecoration = "underline";
   }
 
 
   @HostListener('mouseleave') onMouseLeave() {
-    if (this.el.nativeElement.tagName.toLowerCase() == 'div')
+    // if (this.el.nativeElement.tagName.toLowerCase() == 'div')
     this.el.nativeElement.style.textDecoration =  '';
-    else if(this.el.nativeElement.tagName.toLowerCase() == 'span')
-    this.el.nativeElement.style.fontWeight = 'normal';
+    // else if(this.el.nativeElement.tagName.toLowerCase() == 'span')
+    // this.el.nativeElement.style.fontWeight = 'normal';
   }
 
   private highlight(color: string) {
