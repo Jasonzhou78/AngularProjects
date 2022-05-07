@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { GetTypePipe } from '../get-type.pipe';
-
+import { HighlightDirective } from '../highlight.directive';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',

@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, Input, ElementRef, HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
@@ -6,15 +6,23 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 
 
 export class HighlightDirective {
-
   constructor(private el: ElementRef) { }
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('yellow');
+  @HostListener('mouseover')
+  onMouseOver() {
+  let tag = this.el.nativeElement.tagName;
+  if (tag.toLowerCase() == 'div')
+  this.el.nativeElement.style.textDecoration = "underline";
+  else if(tag.toLowerCase() == "span")
+  this.el.nativeElement.style.fontWeight = "bold"
   }
 
+
   @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('');
+    if (this.el.nativeElement.tagName.toLowerCase() == 'div')
+    this.el.nativeElement.style.textDecoration =  '';
+    else if(this.el.nativeElement.tagName.toLowerCase() == 'span')
+    this.el.nativeElement.style.fontWeight = 'normal';
   }
 
   private highlight(color: string) {
