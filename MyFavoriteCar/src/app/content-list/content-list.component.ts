@@ -64,7 +64,6 @@ getHtml(index: number): string{
       title: 'Accord',
       description: 'Honda produces cars',
       creator: 'Honda',
-      imgURL: 'https://media.ed.edmunds-media.com/honda/accord-hybrid/2021/oem/2021_honda_accord-hybrid_sedan_touring_fq_oem_1_1600.jpg',
       type: 'Sedan',
       /* tags:['blue', '5 seats'] */
     });
@@ -117,7 +116,6 @@ getHtml(index: number): string{
       title: 'F150',
       description: 'Ford produces cars',
       creator: 'Ford',
-      imgURL: 'https://media.ford.com/content/fordmedia/fna/us/en/news/2020/06/25/built-for-getting-things-done-ford-f150/jcr:content/image.img.881.495.jpg/1600201093702.jpg',
       type: 'Truck',
       tags:['AWD', '6 Seats']
     });
