@@ -7,14 +7,14 @@
 
 <!----AS2 code start from here-->
 <div>
-  <h3 class="title" *ngIf = "singleCar?.title">Title: {{ singleCar?.title }}</h3>
-  <div class="description" *ngIf = "singleCar?.description">Description: {{ singleCar?.description }}</div>
-  <div class="creator" *ngIf = "singleCar?.creator">Creator: {{singleCar?.creator}} </div>
-  <div class="type" appHighlight *ngIf = "singleCar?.type">Type: {{ singleCar?.type }}</div><br>
-  <div class="image" (click)="showId()" *ngIf = "singleCar?.imgURL"><img src="{{singleCar?.imgURL}}" width="200"></div>
-  <div class="image" (click)="showId()" *ngIf = "!singleCar?.imgURL"><img src="https://www.supercars.net/blog/wp-content/uploads/2020/12/Lamborghini-Race-Cars.png" width="200"></div>
+  <h3 class="title" *ngIf = "car?.title">Title: {{ car?.title }}</h3>
+  <div class="description" *ngIf = "car?.description">Description: {{ car?.description }}</div>
+  <div class="creator" *ngIf = "car?.creator">Creator: {{car?.creator}} </div>
+  <div class="type" appHighlight *ngIf = "car?.type">Type: {{ car?.type }}</div><br>
+  <div class="image" (click)="showId()" *ngIf = "car?.imgURL"><img src="{{car?.imgURL}}" width="200"></div>
+  <div class="image" (click)="showId()" *ngIf = "!car?.imgURL"><img src="https://www.supercars.net/blog/wp-content/uploads/2020/12/Lamborghini-Race-Cars.png" width="200"></div>
   <div class="tags" >
-    <span class="tag" *ngFor="let tag of singleCar?.tags" >{{tag}}  &nbsp;&nbsp; </span>
+    <span class="tag" *ngFor="let tag of car?.tags" >{{tag}}  &nbsp;&nbsp; </span>
   </div>
 </div>
 

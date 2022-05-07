@@ -6,5 +6,5 @@
   <p *ngIf = 'searchMessage' class = "success">Title Found!</p>
 <div *ngIf = '!searchMessage'class = "fail">Title Not Found!</div>
 </div>
-<app-content-card *ngFor = "let car of _cars; first as isFirst" [singleCar] = "car" class = "notype" [class.found] = "car.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>
+<app-content-card *ngFor = "let item of _cars; first as isFirst" [car] = "item" class = "notype" [class.found] = "item.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>
 
