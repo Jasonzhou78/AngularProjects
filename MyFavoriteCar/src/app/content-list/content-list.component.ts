@@ -120,5 +120,8 @@ getHtml(index: number): string{
       tags:['AWD', '6 Seats']
     });
   }
+  createNewRecord() {
+
+  }
 
 }
