@@ -10,30 +10,28 @@ export class HighlightDirective {
 
   @HostListener('mouseover')
   onMouseOver() {
-/*   let tag = this.el.nativeElement.tagName;
-  if (tag.toLowerCase() == 'div')
-  this.el.nativeElement.style.textDecoration = "underline";
-  else if(tag.toLowerCase() == "span")
-  this.el.nativeElement.style.fontWeight = "bold"
- */
-  let className = this.el.nativeElement.class;
-  if(className =="type")
-  this.el.nativeElement.style.textDecoration = "underline";
-  if (className == "tags")
+
+    // className may target a class in html (use nativeElement.selector, here selector may be
+    // a tag, a class, an id, be careful that it is case sensitive)
+    // style.background
+  let name = this.el.nativeElement.id;
+  if(name =="type")
+  this.el.nativeElement.style.backgroundColor = "red";
+  if (name == "tag")
   this.el.nativeElement.style.fontWeight = "bold";
   }
 
 
   @HostListener('mouseleave') onMouseLeave() {
-    let className = this.el.nativeElement.class;
-    if(className =="type")
-    this.el.nativeElement.style.textDecoration = "";
-    if (className == "tags")
+    let name = this.el.nativeElement.id;
+    if(name =="type")
+    this.el.nativeElement.style.backgroundColor = "antiquewhite";
+    if (name == "tag")
     this.el.nativeElement.style.fontWeight = "normal";
   }
 
   private highlight(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
+
   }
 
 
