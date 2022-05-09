@@ -1,4 +1,4 @@
-<app-create-content></app-create-content>
+<app-create-content newCarEvent = "addCarToList($event)"></app-create-content>
 <div class="checkTitle" >
   <label for="">Check Title: </label>
   <input type="text" #checkTitle>
@@ -6,23 +6,6 @@
   <p *ngIf = 'searchMessage' class = "success">Title Found!</p>
 <div *ngIf = '!searchMessage'class = "fail">Title Not Found!</div>
 </div>
-<div class="newContent">
-  <label for="">ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="number"><br><br>
-  <label for="">Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="text"><br><br>
-  <label for="">Description: </label>
-  <input type="text"><br><br>
-  <label for="">Creator: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="text"><br><br>
-  <label for="">imgURL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="text"><br><br>
-  <label for="">Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-  <input type="text"><br><br>
-  <button type="submit" (click) = "createNewRecord()">Create a new record</button>
-</div>
-
-
 
 
 <app-content-card *ngFor = "let item of _cars; first as isFirst" [car] = "item" class = "notype" [class.found] = "item.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>

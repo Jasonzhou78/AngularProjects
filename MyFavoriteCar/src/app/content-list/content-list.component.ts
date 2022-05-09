@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { GetTypePipe } from '../get-type.pipe';
-import { HighlightDirective } from '../highlight.directive';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
@@ -41,6 +39,15 @@ constructor() {
       return this.searchMessage = false;
     }
   }
+
+  addCarToList(newCarFromChild: Content) {
+
+    console.log(this._cars);
+    this._cars.push(newCarFromChild);
+    console.log(this._cars);
+
+  }
+
 /*   AS1 code
 getHtml(index: number): string{
     if (index >= this._cars.length || index < 0)
@@ -119,9 +126,6 @@ getHtml(index: number): string{
       type: 'Truck',
       tags:['AWD', '6 Seats']
     });
-  }
-  createNewRecord() {
-
   }
 
 }
