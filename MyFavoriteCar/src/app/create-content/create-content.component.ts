@@ -11,9 +11,8 @@ export class CreateContentComponent implements OnInit {
   @Output() newCarEvent: EventEmitter<Content> = new EventEmitter<Content>();
   constructor() { }
   newCar?:Content;
-  ngOnInit(): void {
-  }
-  createNewRecord(id:string, title:string, description:string, creator:string, imgURL:string, type:string):void {
+  ngOnInit(): void {}
+   createNewRecord(id:string, title:string, description:string, creator:string, imgURL:string, type:string):void {
     this.newCar = {
     id: parseInt(id),
     title: title,
@@ -24,4 +23,6 @@ export class CreateContentComponent implements OnInit {
   };
   this.newCarEvent.emit(this.newCar);
   }
+
 }
+

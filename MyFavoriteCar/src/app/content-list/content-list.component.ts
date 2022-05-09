@@ -41,10 +41,10 @@ constructor() {
   }
 
   addCarToList(newCarFromChild: Content) {
-
-    console.log(this._cars);
     this._cars.push(newCarFromChild);
     console.log(this._cars);
+/*     this._cars.push(newCarFromChild);
+    console.log(this._cars); */
 
   }
 
