@@ -15,6 +15,8 @@ export class CreateContentComponent implements OnInit {
     id: -1, title: "", description: '', creator: '', type: undefined
   }
 
+  //because id in newContent is number type, type in input will be string, which is why we choose tempId and tranform to this.newContent.id
+  //tags in newContent is an array, but in input it is a string which needs to be tranformed as well.
   tempId: string = "";
   tempTags: string = '';
   errorMessage: string = '';
@@ -62,6 +64,5 @@ export class CreateContentComponent implements OnInit {
       this.errorMessage = "It failed terribly! - " + failMessage;
     });
   }
-
 }
 

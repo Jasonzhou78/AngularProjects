@@ -1,16 +1,18 @@
 <p>create-content works!</p>
 <div class="newContent">
-  <label for="">ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label for="">ID: </label>
   <input type="number" [(ngModel)]="this.tempId"><br><br>
-  <label for="">Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label for="">Title:</label>
   <input type="text" [(ngModel)]="this.newContent.title"><br><br>
   <label for="">Description: </label>
   <input type="text" [(ngModel)]="this.newContent.description"><br><br>
-  <label for="">Creator: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label for="">Creator: </label>
   <input type="text" [(ngModel)]="this.newContent.creator"><br><br>
-  <label for="">imgURL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label for="">imgURL:</label>
   <input type="text" [(ngModel)]="this.newContent.imgURL"><br><br>
-  <label for="">Type: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <label for="">Type: </label>
   <input type="text" [(ngModel)]="this.newContent.type"><br><br>
+
   <button (click) = "addContentFromChild()">Add Car</button>
+
 </div>
