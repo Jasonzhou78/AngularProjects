@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { GetTypePipe } from '../get-type.pipe';
 import { HighlightDirective } from '../highlight.directive';
+import { CarService } from '../car.service'; // import carservice in order to inject its data into this component
+
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
@@ -9,16 +11,17 @@ import { HighlightDirective } from '../highlight.directive';
 })
 export class ContentListComponent implements OnInit {
 
- _cars: Content[];
+ _cars: Content[] = [];
 
 //initialize the _cars
-constructor() {
-  this._cars = [];
-}
+constructor(private carService: CarService) {}
 
 // define the getter
-  get cars() {
-    return this._cars = [];
+  getCars(): void {
+
+    //this method carService.getCars() has a synchronous signature, in order to retrieve data async, we use
+    //observable and of method because in most cases retrieving data happens on server.
+    this._cars = this.carService.getCars();
   }
 
   // add new car to car list
@@ -58,6 +61,8 @@ getHtml(index: number): string{
 
 
 
-  ngOnInit(){}
+  ngOnInit(): void{
+    this.getCars();
+  }
 
 }
