@@ -8,6 +8,8 @@ import { GetTypePipe } from './get-type.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
 import { FormsModule } from '@angular/forms';
+import { TestChildComponent } from './test-child/test-child.component';
+import { TestParentComponent } from './test-parent/test-parent.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FormsModule } from '@angular/forms';
     GetTypePipe,
     HighlightDirective,
     CreateContentComponent,
+    TestChildComponent,
+    TestParentComponent,
   ],
   imports: [
     BrowserModule,
