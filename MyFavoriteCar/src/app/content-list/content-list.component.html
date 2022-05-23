@@ -6,12 +6,5 @@
   <p *ngIf = 'searchMessage' class = "success">Title Found!</p>
 <div *ngIf = '!searchMessage'class = "fail">Title Not Found!</div>
 </div>
-<div>
-  <label>The Car Id is: </label>
-  <input type="number" [(ngModel)]="this.tempId"><br><br>
-  <button (click) = "getCarById()">Submit</button>
-</div>
-<div></div>
 
 <app-content-card *ngFor = "let item of _cars; first as isFirst" [car] = "item" class = "notype" [class.found] = "item.title == checkTitle.value" [class.first-car] = "isFirst"></app-content-card>
-

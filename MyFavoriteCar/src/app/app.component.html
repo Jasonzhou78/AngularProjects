@@ -1,4 +1,10 @@
+<div>
+  <label>The Car Id is: </label>
+  <input type="number" #id><br><br>
+  <button (click) = "getCarById(id.value)">Submit</button>
+</div>
 
+<app-content-card [car]="someCar" class="single-item-on-app-component"></app-content-card>
 
 <app-content-list></app-content-list>
 
