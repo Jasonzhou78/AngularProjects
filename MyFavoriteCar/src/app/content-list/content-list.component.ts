@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { GetTypePipe } from '../get-type.pipe';
 import { HighlightDirective } from '../highlight.directive';
-import { CarService } from '../car.service'; // import carservice in order to inject its data into this component
+// import carservice in order to inject its data into this component
+import { CarService } from '../car.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-content-list',
@@ -12,6 +14,7 @@ import { CarService } from '../car.service'; // import carservice in order to in
 export class ContentListComponent implements OnInit {
 
  _cars: Content[] = [];
+ tempId: string = '';
 
 //initialize the _cars
 constructor(private carService: CarService) {}
@@ -21,7 +24,11 @@ constructor(private carService: CarService) {}
 
     //this method carService.getCars() has a synchronous signature, in order to retrieve data async, we use
     //observable and of method because in most cases retrieving data happens on server.
-    this._cars = this.carService.getCars();
+
+    // this._cars = this.carService.getCars();
+
+    this.carService.getCars()
+    .subscribe(cars => this._cars = cars);
   }
 
   // add new car to car list
@@ -62,7 +69,14 @@ getHtml(index: number): string{
 
 
   ngOnInit(): void{
+    //to guarantee that the data is visible before we actually use it.
     this.getCars();
+  }
+
+  getCarById() {
+    this.carService.getCarById(parseInt(this.tempId))
+    .subscribe(cars => this._cars)
+    console.log("get car by id!");
   }
 
 }
